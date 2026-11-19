@@ -1,0 +1,360 @@
+
+@charset "UTF-8";
+
+/* ===== 基本樣式 ===== */
+:root {
+    --ink: #3b3533;
+    --muted: #736a67;
+    --coral: #c96f61;
+    --coral-dark: #a8554a;
+    --cream: #fffaf5;
+    --paper: #ffffff;
+    --pink: #f8e9e4;
+    --mint: #e8f0e8;
+    --line: #eadfd6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background-color: var(--cream);
+    font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.8;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.wrap {
+    width: 1120px;
+    margin: 0 auto;
+}
+
+/* ===== 頁首與導覽列 ===== */
+.header {
+    background-color: #fffaf5;
+    border-bottom: 1px solid var(--line);
+}
+
+.head-inner {
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--coral-dark);
+    line-height: 1.3;
+}
+
+.brand small {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--muted);
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav a {
+    display: block;
+    padding: 10px 18px;
+    border-radius: 100px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: white;
+    background-color: var(--coral);
+}
+
+/* ===== 共用文字樣式 ===== */
+.eyebrow {
+    color: var(--coral-dark);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+h1, h2, h3, p {
+    margin-top: 0;
+}
+
+h1, h2, h3 {
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 64px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 38px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* ===== 按鈕樣式 ===== */
+.button {
+    display: inline-block;
+    border-radius: 100px;
+    background-color: var(--coral);
+    color: white;
+    padding: 13px 28px;
+    font-weight: 800;
+    transition: 0.2s;
+}
+
+.button:hover {
+    background-color: var(--coral-dark);
+    transform: translateY(-2px);
+}
+
+.button.outline {
+    background-color: transparent;
+    border: 2px solid var(--coral);
+    color: var(--coral-dark);
+}
+
+.button.outline:hover {
+    background-color: var(--pink);
+}
+
+/* ===== 共用內容區塊 ===== */
+.section {
+    padding: 80px 0;
+}
+
+.section-head {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.section-head h2 {
+    margin: 8px 0;
+}
+
+.section-head p,
+.page-hero p {
+    color: var(--muted);
+}
+
+/* ===== 首頁主視覺 ===== */
+.hero {
+    padding: 45px 0 65px;
+    background: linear-gradient(115deg, #fff7ef, #faeae6);
+}
+
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero h1 {
+    margin: 16px 0 22px;
+}
+
+.hero h1 em {
+    font-style: normal;
+    color: var(--coral);
+}
+
+.hero p {
+    max-width: 480px;
+    color: var(--muted);
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.hero-picture img {
+    border-radius: 32px;
+    box-shadow: 0 24px 70px rgba(139, 97, 80, 0.13);
+}
+
+/* ===== 貓咪圖鑑卡片 ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    overflow: hidden;
+    background-color: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    box-shadow: 0 12px 30px rgba(96, 70, 59, 0.055);
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 22px 24px 26px;
+}
+
+.card-body h3 {
+    font-size: 22px;
+    margin-bottom: 7px;
+}
+
+.card-body p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 13px;
+}
+
+.tag {
+    display: inline-block;
+    color: var(--coral-dark);
+    background-color: #fae7df;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ===== 首頁養貓介紹 ===== */
+.feature {
+    background-color: var(--mint);
+}
+
+.feature-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.feature-panel {
+    background-color: #fffaf4;
+    padding: 42px;
+    border-radius: 28px;
+    text-align: center;
+}
+
+.feature-panel .symbol {
+    display: block;
+    font-size: 88px;
+    line-height: 1.5;
+}
+
+.feature p {
+    color: var(--muted);
+}
+
+/* ===== 內頁標題 ===== */
+.page-hero {
+    padding: 62px 0;
+    background: linear-gradient(120deg, #f9e7de, #f6efe1);
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 52px;
+    margin: 10px 0;
+}
+
+/* ===== 養貓指南 ===== */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.tip-card {
+    padding: 32px;
+    border-radius: 24px;
+    border: 1px solid var(--line);
+    background-color: white;
+}
+
+.tip-card .number {
+    display: inline-block;
+    background-color: var(--pink);
+    color: var(--coral-dark);
+    border-radius: 12px;
+    padding: 4px 12px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.tip-card h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.tip-card p {
+    color: var(--muted);
+    margin: 0;
+}
+
+/* ===== 小提醒區塊 ===== */
+.notice {
+    margin-top: 35px;
+    padding: 25px 30px;
+    border-left: 5px solid var(--coral);
+    background-color: var(--pink);
+    border-radius: 0 16px 16px 0;
+}
+
+.notice p {
+    margin-bottom: 0;
+}
+
+/* ===== 頁尾 ===== */
+.footer {
+    background-color: #443b38;
+    color: #fff7f1;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
